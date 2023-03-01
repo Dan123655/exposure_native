@@ -1,0 +1,30 @@
+diff --git a/node_modules/@candlefinance/slider/src/index.tsx b/node_modules/@candlefinance/slider/src/index.tsx
+index 96909b7..8361b0b 100644
+--- a/node_modules/@candlefinance/slider/src/index.tsx
++++ b/node_modules/@candlefinance/slider/src/index.tsx
+@@ -12,6 +12,7 @@ import {
+ } from 'react-native';
+ 
+ export interface props {
++  snowballValue?: number|string;
+   value?: number;
+   disabled?: boolean;
+   min: number;
+@@ -33,6 +34,7 @@ export interface props {
+ }
+ 
+ const Slider = ({
++  snowballValue,
+   width = 350,
+   height = 30,
+   borderRadius = 25,
+@@ -208,7 +210,8 @@ const Slider = ({
+               },
+             ]}
+           >
+-            {Math.round(_value.current * 100) / 100}
++            {/* {Math.round(_value.current * 100) / 100} */}
++            {snowballValue}
+           </Text>
+         </Animated.View>
+       )}
