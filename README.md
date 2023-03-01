@@ -28,9 +28,9 @@ With this app, you can easily input your film speed, aperture, and shutter speed
 To run this app on your device, follow these steps:
 
 1. Install the latest version of [Node.js](https://nodejs.org/)
-2. Clone this repository to your local machine
-3. Run `npm install` in the root directory of the app to install dependencies
-4. Run `npx react-native run-android` or `npx react-native run-ios` to launch the app on your device or emulator
+2. Clone this repository to your local machine `git clone https://github.com/Dan123655/exposure_native.git`
+3. `cd exposure_native` then run `yarn install` in the root directory of the app to install dependencies
+4. Run `yarn start` with `yarn android` to launch the app on your device or emulator
 
 ## Credits
 
