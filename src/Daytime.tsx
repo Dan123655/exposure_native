@@ -13,18 +13,20 @@ const DayOption = observer(({ sometext, selected, onPress }: DayoptionProps) => 
     <TouchableOpacity
       onPress={onPress}
       style={{
-        width: 100,
-        height: 60,
-        borderRadius: 20,
-        backgroundColor: selected ? 'skyblue' : 'lightgray',
+        width: 90,
+        height: selected ? 55 : 50,
+        borderRadius: 30,
+        backgroundColor: selected ? '#9693b4' : '#f2dec2',
         justifyContent: 'center',
         alignItems: 'center',
+        // borderColor: 'black',
+        // borderWidth: 1,
       }}
     >
       <Text
         style={{
-          fontSize: 16,
-          color: 'white',
+          fontSize: selected ? 22 : 16,
+          color: selected ? 'white' : 'black',
           textAlign: 'center',
           textAlignVertical: 'center',
         }}
@@ -46,12 +48,14 @@ const Daytime = observer(() => {
                 alignItems: 'center',
                 justifyContent: 'space-evenly',
                 // backgroundColor: 'gray',
-                width: '100%',
-          height: 100,
-                marginBottom: 50,
+                // width: '100%',
+                width: 350,
+          maxHeight: 80,
+          // borderColor: 'black',
+          // borderWidth: 1,
             }}
         >
-            <DayOption
+        <DayOption
                 sometext="Sunny"
                 selected={exposure.weather.value === 'Sunny'}
                 onPress={() => exposure.setWeather('Sunny')}
