@@ -1,9 +1,11 @@
 import * as React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Text, useColorScheme } from 'react-native';
 import Slider from '@candlefinance/slider';
 import exposure from './store/exposure';
 import { observer } from 'mobx-react-lite';
+import { screenWidth } from './utils/constants';
 const Slidr = observer(() => {
+  const IsDarkMode = useColorScheme() === 'dark';
   const [myValue, setMyValue] = React.useState<number>(2);
 
   return (
@@ -24,15 +26,21 @@ const Slidr = observer(() => {
         onComplete={(value) => {
           console.log('COMPLETE', value);
         }}
-        width={300}
+        width={screenWidth * 0.7}
         height={54}
         step={1}
-        maximumTrackTintColor="#c7c7c7"
-        minimumTrackTintColor="#ff0067"
-        ballIndicatorColor={'gray'}
-        ballIndicatorTextColor={'white'}
+        maximumTrackTintColor="#d8c3c3"
+        minimumTrackTintColor="#c0abc1"
+        ballIndicatorColor={'#f2dec2'}
+        ballIndicatorTextColor={'black'}
 
-      />
+        />
+        <Text style={{
+                    
+                      color: IsDarkMode ? 'lightgrey' : 'grey',
+                  }}>
+            film speed
+          </Text>
       </View>
 
       </>
@@ -42,15 +50,11 @@ const Slidr = observer(() => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    maxHeight: 120,
     alignItems: 'center',
-    justifyContent: 'center',
-    marginTop: 50,
-    marginBottom: 30,
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
-  },
+    justifyContent: 'flex-end',
+    // borderColor: 'orange',
+    // borderWidth: 1,
+  }
 });
 export default Slidr;

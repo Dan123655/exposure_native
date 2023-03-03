@@ -12,9 +12,12 @@ const ExposeMainComponent = observer(() => {
             {
                 flex: 1,
                 alignItems: 'center',
-                justifyContent: 'center',
-                backgroundColor: 'white',
-                
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                // backgroundColor: 'beige',
+                // borderColor: 'black',
+                // borderWidth: 3,
+                width: '90%',
             }
     }>
             <Output />
