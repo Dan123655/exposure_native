@@ -6,6 +6,10 @@ With this app, you can easily input your film speed, aperture, and shutter speed
 
 ## Features
 
+<p align="center">
+    <img width="360" src="https://i.postimg.cc/BQpnKdcR/Screenshot-1677817158.png" alt="Material Bread logo">
+</p>
+
 - Simple and intuitive user interface
 - Accurate calculations based on film speed, aperture, and shutter speed
 - Easy to adjust settings with sliders or manual inputs
