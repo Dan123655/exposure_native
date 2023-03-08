@@ -51,8 +51,6 @@ function App(): JSX.Element {
             // flexDirection: 'row',
             alignItems: 'center',
             justifyContent: 'center',
-
-            marginTop: 5,
             backgroundColor: isDarkMode ? 'black' : '',
             // borderColor: 'black',
           // borderWidth: 1,
