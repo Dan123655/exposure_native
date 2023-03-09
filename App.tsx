@@ -7,6 +7,7 @@
 
 import React from 'react';
 import ExposureMainComponent from './src/ExposureMainComponent'
+import codePush from "react-native-code-push";
 import {
   SafeAreaView,
   ScrollView,
@@ -20,7 +21,7 @@ import { screenHeight } from './src/utils/constants';
 
 
 
-function App(): JSX.Element {
+const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
@@ -58,5 +59,5 @@ function App(): JSX.Element {
   );
 }
 
-
-export default App;
+const codePushOptions = { checkFrequency: codePush.CheckFrequency.ON_APP_RESUME };
+export default codePush(codePushOptions)(App);
