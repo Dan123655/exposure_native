@@ -26,8 +26,6 @@ function App(): JSX.Element {
   const backgroundStyle = {
     backgroundColor: 'white',
     flex: 1,
-    // borderColor: 'red',
-    // borderWidth: 1,
     minHeight: screenHeight,
   };
 
@@ -45,15 +43,10 @@ function App(): JSX.Element {
         
         <View
           style={{
-            // backgroundColor: isDarkMode ? Colors.black : Colors.white,
             flex: 1,
-            // flexWrap: 'wrap',
-            // flexDirection: 'row',
             alignItems: 'center',
             justifyContent: 'center',
             backgroundColor: isDarkMode ? 'black' : '',
-            // borderColor: 'black',
-          // borderWidth: 1,
           paddingBottom: 70,
           paddingTop:40,
 
