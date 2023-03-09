@@ -1,10 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import React from 'react';
 import ExposureMainComponent from './src/ExposureMainComponent'
 import codePush from "react-native-code-push";
@@ -21,7 +14,7 @@ import { screenHeight } from './src/utils/constants';
 
 
 
-const App = () => {
+const App = codePush(() => {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
@@ -57,7 +50,7 @@ const App = () => {
         </View>
     </SafeAreaView>
   );
-}
+})
 
-const codePushOptions = { checkFrequency: codePush.CheckFrequency.ON_APP_RESUME };
-export default codePush(codePushOptions)(App);
+
+export default App;

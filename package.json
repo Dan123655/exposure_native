@@ -17,7 +17,7 @@
     "patch-package": "^6.5.1",
     "postinstall-postinstall": "^2.1.0",
     "react": "18.2.0",
-    "react-native": "0.71.3",
+    "react-native": "0.69.7",
     "react-native-code-push": "^7.1.0",
     "react-native-list-slider": "^1.2.1",
     "rn-slider-switch": "^0.0.3"

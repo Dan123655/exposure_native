@@ -16,19 +16,14 @@ public class MainApplication extends Application implements ReactApplication {
   private final ReactNativeHost mReactNativeHost =
       new DefaultReactNativeHost(this) {
         @Override
+        protected String getJSBundleFile() {
+            return CodePush.getJSBundleFile();
+        }
+        @Override
         public boolean getUseDeveloperSupport() {
           return BuildConfig.DEBUG;
         }
-        
-        @Override
-        protected String getJSBundleFile() {
-          return CodePush.getJSBundleFile();
-        }
-        
-        @Override
-        public ReactInstanceManager getReactInstanceManager() {
-          return super.getReactInstanceManager();
-        }
+
 
         @Override
         protected List<ReactPackage> getPackages() {

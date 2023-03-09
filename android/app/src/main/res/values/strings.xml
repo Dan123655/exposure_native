@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Exposure Calculator</string>
+    <string moduleConfig="true" name="CodePushDeploymentKey">DUMMY_DEPLOYMENT_KEY</string>
 </resources>
