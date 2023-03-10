@@ -29,8 +29,9 @@ const Output = observer(() => {
         style={{
           fontSize: 64,
           color: isDarkMode ? 'white' : 'black',
-          fontFamily: 'fantasy',
-          fontWeight: 'bold',
+          textAlign: 'center',
+          fontFamily: 'Monospace',
+          fontWeight: '100',
           alignItems: 'center',
           justifyContent: 'center',
           // borderColor: 'black',

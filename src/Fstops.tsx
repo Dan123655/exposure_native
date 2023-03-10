@@ -17,13 +17,10 @@ const Fstops = observer(() => {
           min={1}
           max={9}
           onChange={(value) => {
-            console.log('CHANGE', value);
               setMyValue(value);
                 exposure.setFstop(value);
           }}
-          onComplete={(value) => {
-            console.log('COMPLETE', value);
-          }}
+          onComplete={(value) => {          }}
           width={screenWidth * 0.7}
           height={54}
           step={1}

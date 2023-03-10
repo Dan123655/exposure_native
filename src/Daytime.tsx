@@ -14,9 +14,12 @@ const DayOption = observer(({ sometext, selected, onPress }: DayoptionProps) => 
       onPress={onPress}
       style={{
         width: 90,
-        height: selected ? 55 : 50,
-        borderRadius: 30,
-        backgroundColor: selected ? '#9693b4' : '#f2dec2',
+        height: 50,
+        // height: selected ? 55 : 50,
+        borderRadius:selected? 10: 12,
+        backgroundColor: !selected ? '#9693b4' : '#f2dec2',
+        borderBottomColor: 'grey',
+        borderBottomWidth: selected ? 2 : 0,
         justifyContent: 'center',
         alignItems: 'center',
         // borderColor: 'black',
@@ -25,13 +28,15 @@ const DayOption = observer(({ sometext, selected, onPress }: DayoptionProps) => 
     >
       <Text
         style={{
-          fontSize: selected ? 22 : 16,
-          color: selected ? 'white' : 'black',
+          // fontSize: selected ? 22 : 16,
+          fontSize: 16,
+          fontFamily: 'Monospace',
+          color: !selected ? 'white' : 'black',
           textAlign: 'center',
           textAlignVertical: 'center',
         }}
       >
-        {sometext}
+        {sometext.toLocaleLowerCase()}
       </Text>
     </TouchableOpacity>
   );

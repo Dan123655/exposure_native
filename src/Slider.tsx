@@ -18,13 +18,13 @@ const Slidr = observer(() => {
         min={1}
         max={5}
         onChange={(value) => {
-          console.log('CHANGE', value);
+          // console.log('CHANGE', value);
           setMyValue(value);
           exposure.setIso(value === 1 ? 50 : value === 2 ? 160 : value === 3 ? 200 : value === 4 ? 400 : value === 5 ? 800 : 100,value);
  
         }}
         onComplete={(value) => {
-          console.log('COMPLETE', value);
+          // console.log('COMPLETE', value);
         }}
         width={screenWidth * 0.7}
         height={54}
@@ -39,7 +39,7 @@ const Slidr = observer(() => {
                     
                       color: IsDarkMode ? 'lightgrey' : 'grey',
                   }}>
-            film speed
+            film speed (ISO)
           </Text>
       </View>
 

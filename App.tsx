@@ -1,12 +1,6 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import React from 'react';
 import ExposureMainComponent from './src/ExposureMainComponent'
+import codePush from "react-native-code-push";
 import {
   SafeAreaView,
   ScrollView,
@@ -20,14 +14,12 @@ import { screenHeight } from './src/utils/constants';
 
 
 
-function App(): JSX.Element {
+const App = codePush(() => {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
     backgroundColor: 'white',
     flex: 1,
-    // borderColor: 'red',
-    // borderWidth: 1,
     minHeight: screenHeight,
   };
 
@@ -45,17 +37,10 @@ function App(): JSX.Element {
         
         <View
           style={{
-            // backgroundColor: isDarkMode ? Colors.black : Colors.white,
             flex: 1,
-            // flexWrap: 'wrap',
-            // flexDirection: 'row',
             alignItems: 'center',
             justifyContent: 'center',
-
-            marginTop: 5,
             backgroundColor: isDarkMode ? 'black' : '',
-            // borderColor: 'black',
-          // borderWidth: 1,
           paddingBottom: 70,
           paddingTop:40,
 
@@ -65,7 +50,7 @@ function App(): JSX.Element {
         </View>
     </SafeAreaView>
   );
-}
+})
 
 
 export default App;
