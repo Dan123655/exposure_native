@@ -12,6 +12,9 @@
   },
   "dependencies": {
     "@candlefinance/slider": "^0.1.4",
+    "appcenter": "4.4.5",
+    "appcenter-analytics": "4.4.5",
+    "appcenter-crashes": "4.4.5",
     "mobx": "^6.8.0",
     "mobx-react-lite": "^3.4.0",
     "patch-package": "^6.5.1",

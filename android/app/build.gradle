@@ -78,12 +78,13 @@ import com.android.build.OutputFile
  *   extraPackagerArgs: []
  * ]
  */
-
+apply from: "../../node_modules/react-native/react.gradle"
 project.ext.react = [
-    enableHermes: false,  // clean and rebuild if changing
+    enableHermes: false,
+    bundleInRelease: true  // clean and rebuild if changing
 ]
 
-apply from: "../../node_modules/react-native/react.gradle"
+
 
 /**
  * Set this to true to create two separate APKs instead of one:
@@ -226,15 +227,24 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
-    }
+        release {
+            if (project.hasProperty('MYAPP_UPLOAD_STORE_FILE')) {
+                storeFile file(MYAPP_UPLOAD_STORE_FILE)
+                storePassword MYAPP_UPLOAD_STORE_PASSWORD
+                keyAlias MYAPP_UPLOAD_KEY_ALIAS
+                keyPassword MYAPP_UPLOAD_KEY_PASSWORD
+            }
+    }}
     buildTypes {
         debug {
             signingConfig signingConfigs.debug
-        }
+            resValue "string", "CodePushDeploymentKey", '""'        
+            }
         release {
             // Caution! In production, you need to generate your own keystore file.
             // see https://reactnative.dev/docs/signed-apk-android.
-            signingConfig signingConfigs.debug
+            resValue "string", "CodePushDeploymentKey", '"' + System.getenv("CODEPUSH_KEY") + '"'
+            signingConfig signingConfigs.release
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }

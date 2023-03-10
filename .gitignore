@@ -42,6 +42,8 @@ buck-out/
 \.buckd/
 *.keystore
 !debug.keystore
+appcenter-config.json
+*.env
 
 # fastlane
 #
