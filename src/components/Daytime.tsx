@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
-import exposure from './store/exposure';
+import exposure from '../store/exposure';
 import { observer } from 'mobx-react-lite';
 interface DayoptionProps {
   sometext: string;

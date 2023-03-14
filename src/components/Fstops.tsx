@@ -1,9 +1,9 @@
 import { View, Text, StyleSheet,useColorScheme } from 'react-native'
 import React, {useState} from 'react'
 import Slider from '@candlefinance/slider';
-import exposure from './store/exposure';
+import exposure from '../store/exposure';
 import { observer } from 'mobx-react-lite';
-import { screenWidth } from './utils/constants';
+import { screenWidth } from '../utils/constants';
 const Fstops = observer(() => {
   const IsDarkMode = useColorScheme() === 'dark';
     const [myValue, setMyValue] = React.useState<number>(6);
@@ -34,7 +34,7 @@ const Fstops = observer(() => {
             style={{
               color: IsDarkMode ? 'lightgrey' : 'grey',
           }}>
-            aperture
+            f-stop (aperture)
           </Text>
             </View>
         </>
