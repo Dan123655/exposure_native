@@ -1,5 +1,5 @@
 import React from 'react';
-import ExposureMainComponent from './src/ExposureMainComponent'
+import ExposureMainComponent from './src/components/ExposureMainComponent'
 import codePush from "react-native-code-push";
 import {
   SafeAreaView,

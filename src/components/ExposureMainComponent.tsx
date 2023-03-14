@@ -4,7 +4,6 @@ import Slider from './Slider'
 import Daytime from './Daytime';
 import Fstops from './Fstops';
 import Output from './Output';
-import exposure from './store/exposure';
 import { observer } from 'mobx-react-lite';
 
 const ExposeMainComponent = observer(() => {
@@ -40,6 +39,7 @@ const ExposeMainComponent = observer(() => {
     >
       <Animated.View style={{ opacity: outputOpacity }}>
         <Output />
+
       </Animated.View>
       <Animated.View style={{ opacity: daytimeOpacity }}>
         <Daytime />
