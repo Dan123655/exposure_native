@@ -140,8 +140,8 @@ android {
         applicationId "com.exposure_native"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 3
-        versionName "1.2"
+        versionCode 4
+        versionName "1.3"
         buildConfigField "boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString()
 
         if (isNewArchitectureEnabled()) {
@@ -243,7 +243,8 @@ android {
         release {
             // Caution! In production, you need to generate your own keystore file.
             // see https://reactnative.dev/docs/signed-apk-android.
-            resValue "string", "CodePushDeploymentKey", '"' + System.getenv("CODEPUSH_KEY") + '"'
+            def codePushDeploymentKey = '"' + project.getProperty('MYAPP_CODEPUSH_KEY') + '"'
+            resValue "string", "CodePushDeploymentKey", codePushDeploymentKey
             signingConfig signingConfigs.release
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"

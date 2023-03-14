@@ -34,7 +34,7 @@ const Fstops = observer(() => {
             style={{
               color: IsDarkMode ? 'lightgrey' : 'grey',
           }}>
-            f-stop (aperture)
+            aperture
           </Text>
             </View>
         </>
